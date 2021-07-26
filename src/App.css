@@ -1,4 +1,6 @@
 ::placeholder {
     padding: 2px;
+    font-weight: 500;
     color: #4B4343;
+    font-family: 'Roboto', sans-serif;
 }

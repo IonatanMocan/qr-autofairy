@@ -1,6 +1,6 @@
 import React from 'react'
 import Select from 'react-select'
-import { SelectWrapper } from './styles.js'
+import './styles.css'
 
 
 const optionsMaker = [
@@ -23,10 +23,10 @@ const optionsMaker = [
     { value: 'strawberry', label: 'Strawberry' },
     { value: 'vanilla', label: 'Vanilla' }
   ]
-function SellCar() {
+function SellCar(props) {
     return (
-        <SelectWrapper>
-            <div className="select">
+        <div className={props.classSettings}>
+            <div className="select__container">
                 <div className="select__wrapper">
                     <Select className="select__item" options={optionsModel} defaultValue={optionsModel[0]}/>
                     <Select className="select__item" options={optionsYear} defaultValue={optionsYear[0]}/>
@@ -43,7 +43,7 @@ function SellCar() {
             <div className="select-surce">
                 <img src='https://lh3.google.com/u/1/d/1JhMN7mPibD8j-vgLyj6A87ofKiPLdK-G=w1920-h969-iv1' alt="" />
             </div>
-        </SelectWrapper>
+        </div>
         
     )
 }
