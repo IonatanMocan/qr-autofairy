@@ -1,5 +1,8 @@
+import React from 'react';
+import Homepage from './pages/Homepage';
+
 function App() {
-  return <h1>QR Autofairy App</h1>;
+  return <Homepage />;
 }
 
 export default App;
