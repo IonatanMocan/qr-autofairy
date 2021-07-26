@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import BlueButton from '../components/BlueButton';
 
 import PeopleIllustrationPic from '../images/people-illustration.png';
+import CarsHomepage from '../components/CarsHomepage';
 
 const HeroWrapper = styled.div`
   height: 496px;
@@ -30,6 +31,10 @@ const HeroWrapper = styled.div`
   }
 `;
 
+const CarsHomepageWrapper = styled.div`
+  margin: 172px 56px 80px 56px;
+`;
+
 const Homepage = () => {
   return (
     <>
@@ -44,6 +49,9 @@ const Homepage = () => {
           <BlueButton text='SALE WITH US' />
         </div>
       </HeroWrapper>
+      <CarsHomepageWrapper>
+        <CarsHomepage />
+      </CarsHomepageWrapper>
     </>
   );
 };
