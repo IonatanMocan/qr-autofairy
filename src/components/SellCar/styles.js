@@ -37,10 +37,6 @@ export const SelectWrapper = styled.div`
         margin: 0 0 34px 0;
         width: 300px;
     }
-    ::placeholder {
-        padding: 2px;
-        color: #4B4343;
-    }
     .select__descripteon {
         width: 100%;
     }
