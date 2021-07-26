@@ -97,6 +97,8 @@ const CarItemWrapper = styled.div`
 const CarImageWrapper = styled.section`
   height: 227px;
   background: url(${({ image }) => image});
+  background-size: cover;
+  background-position: center;
 `;
 
 const CarItem = ({ model, price, view, image }) => {
