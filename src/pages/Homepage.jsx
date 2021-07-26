@@ -6,6 +6,7 @@ import BlueButton from '../components/BlueButton';
 
 import PeopleIllustrationPic from '../images/people-illustration.png';
 import CarsHomepage from '../components/CarsHomepage';
+import Footer from '../components/Footer';
 
 const HeroWrapper = styled.div`
   height: 496px;
@@ -52,6 +53,7 @@ const Homepage = () => {
       <CarsHomepageWrapper>
         <CarsHomepage />
       </CarsHomepageWrapper>
+      <Footer />
     </>
   );
 };
