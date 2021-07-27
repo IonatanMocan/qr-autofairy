@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
+import Select from 'react-select'
 import Acardion from '../acardion/Acardion'
 import CarIcon from '../ikon/CarIcon'
-import Select from 'react-select'
 import '../main.css'
 
 const Transmission = [
@@ -44,7 +44,7 @@ const Doors = [
   { value: 'strawberry', label: 'Strawberry' },
   { value: 'vanilla', label: 'Vanilla' }
 ]
-class DetailsVachine extends Component {
+class Detailsvehicle extends Component {
     constructor(props) {
       super(props)
       this.state = {
@@ -98,4 +98,4 @@ class DetailsVachine extends Component {
     }
 }
 
-export default DetailsVachine
+export default Detailsvehicle

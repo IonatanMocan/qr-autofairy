@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Acardion from '../acardion/Acardion'
-import './styles.css'
 import UploadIcon from './../ikon/UploadIcon';
 import AddMoreIcon from './../ikon/AddMoreIcon';
 

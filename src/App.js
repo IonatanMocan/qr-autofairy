@@ -3,10 +3,12 @@ import SellCar from './components/SellCar/SellCar';
 import './App.css'
 import  styled  from 'styled-components';
 import Contact from './components/Contact/Contact';
-import DetailsVachine from './components/DetailsVechile/Detailsvechine';
+import DetailsVachine from './components/Detailsvehicle/Detailsvehicle';
 import Upload from './components/Upload/Upload';
 import SellPageHeader from './components/SellPageHeader';
 import './index.css'
+import BlueButton from './components/BlueButton';
+
 const Container = styled.div`
     max-width: 1300px;
     margin: 0 auto;
@@ -37,11 +39,7 @@ function App() {
                     <Contact/>
                     <DetailsVachine/>
                     <Upload/>
-            <div className="secondary">
-                <button className="secondary-btn" type="button">
-                    NEXT
-                </button>
-            </div>
+                    <BlueButton text="NEXT"/>
             </Container>
         </div>
     )
