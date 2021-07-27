@@ -8,24 +8,29 @@ class Contact extends Component{
     constructor(props) {
       super(props)
       this.state = {
-        settings: false
+        settings: false,
+        activeWrapper: false
       }
       this.addSettings = this.addSettings.bind(this)
     }
     addSettings() {
-      this.setState(({settings}) => ({
-        settings: !settings
+      this.setState(({settings, activeWrapper}) => ({
+        settings: !settings,
+        activeWrapper: !activeWrapper
     }))
     }
     render() {
-      const {settings} = this.state
+      const {settings, activeWrapper} = this.state
       let classSettings = 'select'
-
+      let activeClassWrapper = 'edtit-wrapper'
       if(settings) {
         classSettings += ' select--active'
       }
+      if(activeWrapper) {
+        activeClassWrapper += ' edtit-wrapper--active'
+      }
       return (
-        <>
+        <div className={activeClassWrapper}>
         <Acardion title="Contact information" level='50%' icon={<ContactIcon/>} addSettings={this.addSettings} />
         <div className={classSettings}>
         <form className="select__container contacts">
@@ -40,7 +45,7 @@ class Contact extends Component{
                   </div>
           </form>
           </div>
-        </>
+        </div>
     )
     }
 }

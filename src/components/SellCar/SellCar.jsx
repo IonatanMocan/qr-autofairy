@@ -29,24 +29,30 @@ class SellCar extends Component{
     constructor(props) {
       super(props)
       this.state = {
-        settings: false
+        settings: false,
+        activeWrapper: false
       }
       this.addSettings = this.addSettings.bind(this)
     }
     addSettings() {
-      this.setState(({settings}) => ({
-        settings: !settings
+      this.setState(({settings, activeWrapper}) => ({
+        settings: !settings,
+        activeWrapper: !activeWrapper
     }))
     }
     render() {
-      const {settings} = this.state
+      const {settings, activeWrapper} = this.state
       let classSettings = 'select'
+      let activeClassWrapper = 'edtit-wrapper'
 
       if(settings) {
         classSettings += ' select--active'
       }
+      if(activeWrapper) {
+        activeClassWrapper += ' edtit-wrapper--active'
+      }
       return (
-        <>
+        <div className={activeClassWrapper}>
         <Acardion title="Basic Info" level='15%' icon={<CarIcon/>} addSettings={this.addSettings} />
         <div className={classSettings}>
               <div className="select__container">
@@ -67,7 +73,7 @@ class SellCar extends Component{
                   <img src='https://lh3.google.com/u/1/d/1JhMN7mPibD8j-vgLyj6A87ofKiPLdK-G=w1920-h969-iv1' alt="" />
               </div>
           </div>
-        </>
+        </div>
     )
     }
 }

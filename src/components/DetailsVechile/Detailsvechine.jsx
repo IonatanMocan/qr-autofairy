@@ -48,7 +48,8 @@ class DetailsVachine extends Component {
     constructor(props) {
       super(props)
       this.state = {
-        settings: false
+        settings: false,
+        activeWrapper: false
       }
       this.addSettings = this.addSettings.bind(this)
     }
@@ -58,14 +59,19 @@ class DetailsVachine extends Component {
     }))
     }
     render() {
-      const {settings} = this.state
+      const {settings, activeWrapper} = this.state
       let classSettings = 'select'
+
+      let activeClassWrapper = 'edtit-wrapper'
 
       if(settings) {
         classSettings += ' select--active'
       }
+      if(activeWrapper) {
+        activeClassWrapper += ' edtit-wrapper--active'
+      }
       return (
-        <>
+        <div className={activeClassWrapper}>
         <Acardion title="Contact informationda" level='75%' icon={<CarIcon/>} addSettings={this.addSettings} />
         <div className={classSettings}>
           <div className="select__container">
@@ -87,7 +93,7 @@ class DetailsVachine extends Component {
                   <img src='https://lh3.google.com/u/1/d/1HgoQHsYvDdKs-ZUwfA9SJcqVnBCIqgce=w1920-h969-iv1' alt="" />
               </div>
         </div>
-        </>
+        </div>
     )
     }
 }
