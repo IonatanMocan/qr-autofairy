@@ -3,6 +3,7 @@ import Acardion from '../acardion/Acardion'
 import CarIcon from '../ikon/CarIcon'
 import './styles.css'
 import UploadIcon from './../ikon/UploadIcon';
+import AddMoreIcon from './../ikon/AddMoreIcon';
 
 class Upload extends Component {
     constructor(props) {
@@ -28,7 +29,11 @@ class Upload extends Component {
         <>
         <Acardion title="Upload photos" level='100%' icon={<UploadIcon/>} addSettings={this.addSettings} />
         <div className={classSettings}>
-            <h1>it work</h1>
+            <label className="addMore" htmlFor="file">
+              {<AddMoreIcon/>}
+              <h2>ADD MORE</h2>
+              </label>
+            <input className="file__label" id="file" type="file" />
         </div>
         </>
     )

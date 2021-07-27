@@ -7,26 +7,32 @@ class Acardion extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            extend: false
+            extend: false,
+            acordionSettings: false
         }
         this.ExtendAcordion = this.ExtendAcordion.bind(this)
     }
     ExtendAcordion() {
-        this.setState(({extend}) => ({
-            extend: !extend
+        this.setState(({extend, acordionSettings}) => ({
+            extend: !extend,
+            acordionSettings: !acordionSettings
 
         }))
     }
     render() {
-        const {extend} = this.state
+        const {extend, acordionSettings} = this.state
+        let classSettings = 'acardion__settings'
         let classNames = 'arrow'
 
         if(extend) {
             classNames += ' arrow-active'
         }
+        if(acordionSettings) {
+            classSettings += ' acardion__settings--active'
+        }
     return (
         <div onClick={this.props.addSettings} className="acardion">
-            <div onClick={this.ExtendAcordion} className="acardion__settings">
+            <div onClick={this.ExtendAcordion} className={classSettings}>
                 <div className="acardion__arrow">
                     <ArrowIcon classNames={classNames}/>
                 </div>

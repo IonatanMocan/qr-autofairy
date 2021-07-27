@@ -1,12 +1,12 @@
 .select {
     display: none;
+    font-family: 'Roboto', sans-serif;
 }
 .select--active {
     display: flex;
-    font-family: 'Roboto', sans-serif;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    width: 1260px;
+    max-width: 1260px;
     padding: 10px;
     flex-wrap: wrap;
 }
@@ -51,5 +51,5 @@
     width: 100%;
 }
 .contacts {
-    margin: 40px 0;
+    margin: 40px auto;
 }
