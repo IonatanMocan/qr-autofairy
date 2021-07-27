@@ -62,13 +62,13 @@ class DetailsVachine extends Component {
       const {settings, activeWrapper} = this.state
       let classSettings = 'select'
 
-      let activeClassWrapper = 'edtit-wrapper'
+      let activeClassWrapper = 'edit-wrapper'
 
       if(settings) {
         classSettings += ' select--active'
       }
       if(activeWrapper) {
-        activeClassWrapper += ' edtit-wrapper--active'
+        activeClassWrapper += ' edit-wrapper--active'
       }
       return (
         <div className={activeClassWrapper}>
