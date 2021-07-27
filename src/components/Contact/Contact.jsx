@@ -35,13 +35,13 @@ class Contact extends Component{
         <div className={classSettings}>
         <form className="select__container contacts">
                   <div className="select__wrapper">
-                      <input autoComplete className="select__label" placeholder="Name" type="text" />
-                      <input className="select__label" placeholder="Phone Number" type="number" />
+                      <input autoComplete="true" className="select__label" placeholder="Name" type="text" />
+                      <input autoComplete="true"className="select__label" placeholder="Phone Number" type="number" />
               
                   </div>
                   <div className="select__wrapper">
-                      <input className="select__label" placeholder="Preferred Time for Call" type="text" />
-                      <input className="select__label" placeholder="Email" type="email" />
+                      <input autoComplete="true" className="select__label" placeholder="Preferred Time for Call" type="text" />
+                      <input autoComplete="true" className="select__label" placeholder="Email" type="email" />
                   </div>
           </form>
           </div>
