@@ -1,51 +1,67 @@
 import React, {Component} from 'react'
+import styled from 'styled-components';
 import ArrowIcon from '../ikon/ArrowIcon';
 
+const AcordionWrapper = styled.div`
 
-class Acardion extends Component {
+display: flex;
+background-color: #DFEAFC;
+justify-content: space-around;
+align-items: center;
+margin: 40px 0;
+border-radius: 10px;
+padding: 12px 0;
+font-family: 'Roboto', sans-serif;
+div {
+    display: flex;
+    align-items: center;
+    width: 330px;
+    justify-content: center;
+}
+h3 {
+    font-family: 'Roboto', sans-serif;
+    line-height: 94%;
+    text-align: center;
+    letter-spacing: 0.01em;
+    color: #6A5D5D;
+    margin-left: 40px;
+}
+span {
+    color:#0069A4;
+}
+
+`;
+export default class Acardion extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            extend: false,
-            acordionSettings: false
+            arrow: false
         }
-        this.ExtendAcordion = this.ExtendAcordion.bind(this)
+        this.turnArrow = this.turnArrow.bind(this)
     }
-    ExtendAcordion() {
-        this.setState(({extend, acordionSettings}) => ({
-            extend: !extend,
-            acordionSettings: !acordionSettings
-
+    turnArrow() {
+        this.setState(({arrow}) =>({
+            arrow: !arrow
         }))
     }
     render() {
-        const {extend, acordionSettings} = this.state
-        let classSettings = 'acardion__settings'
-        let classNames = 'arrow'
+        const {arrow} = this.state
+        let arrows = 'arrow'
 
-        if(extend) {
-            classNames += ' arrow-active'
-        }
-        if(acordionSettings) {
-            classSettings += ' acardion__settings--active'
+        if(arrow) {
+            arrows += ' arrow--active'
         }
     return (
-        <div onClick={this.props.addSettings} className="acardion">
-            <div onClick={this.ExtendAcordion} className={classSettings}>
-                <div className="acardion__arrow">
-                    <ArrowIcon classNames={classNames}/>
+        <div onClick={this.turnArrow}>
+            <AcordionWrapper onClick={this.props.onClick} className="acardion">
+                <ArrowIcon classNames={arrows} />
+                <div>
+                    {this.props.icon}
+                    <h3>{this.props.title}</h3>
                 </div>
-            <div className="acardion__descripteon">
-                {this.props.icon}
-                <span>{this.props.title}</span>
-            </div>
-            <div className="acardion__complete">
-                <span>{this.props.level} complete</span>
-            </div>
-            </div>
+                    <span>{this.props.level} complete</span>
+            </AcordionWrapper>
         </div>
     )
     }
 }
-
-export default Acardion

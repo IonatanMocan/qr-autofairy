@@ -1,7 +1,6 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Select from 'react-select'
-import Acardion from '../acardion/Acardion'
-import CarIcon from '../ikon/CarIcon'
+import styled from 'styled-components'
 import '../main.css'
 
 const Transmission = [
@@ -44,58 +43,32 @@ const Doors = [
   { value: 'strawberry', label: 'Strawberry' },
   { value: 'vanilla', label: 'Vanilla' }
 ]
-class Detailsvehicle extends Component {
-    constructor(props) {
-      super(props)
-      this.state = {
-        settings: false,
-        activeWrapper: false
-      }
-      this.addSettings = this.addSettings.bind(this)
-    }
-    addSettings() {
-      this.setState(({settings}) => ({
-        settings: !settings
-    }))
-    }
-    render() {
-      const {settings, activeWrapper} = this.state
-      let classSettings = 'select'
 
-      let activeClassWrapper = 'edit-wrapper'
+const DetailsvehicleWrapper = styled.div`
+display: flex;
+justify-content: space-between;
+flex-wrap:wrap;
+width: 100%`;
 
-      if(settings) {
-        classSettings += ' select--active'
-      }
-      if(activeWrapper) {
-        activeClassWrapper += ' edit-wrapper--active'
-      }
+
+export default function Detailsvehicle() {
       return (
-        <div className={activeClassWrapper}>
-        <Acardion title="Contact informationda" level='75%' icon={<CarIcon/>} addSettings={this.addSettings} />
-        <div className={classSettings}>
-          <div className="select__container">
+            <DetailsvehicleWrapper>
               <div className="select__wrapper">
                   <Select className="select__item" options={Transmission} defaultValue={Transmission[0]}/>
                   <Select className="select__item" options={Engine} defaultValue={Engine[0]}/>
                   <Select className="select__item" options={ExteriorColor} defaultValue={ExteriorColor[0]}/>
                   <Select className="select__item" options={Passengers} defaultValue={Passengers[0]}/>
-                      
-                  </div>
-                  <div className="select__wrapper">
+                </div>
+                <div className="select__wrapper">
                       <Select className="select__item" options={FuelType} defaultValue={FuelType[0]}/>
                       <Select className="select__item" options={Drivetrain} defaultValue={Drivetrain[0]}/>
                       <Select className="select__item" options={InteriorColor} defaultValue={InteriorColor[0]}/>
                       <Select className="select__item" options={Doors} defaultValue={Doors[0]}/>
-                  </div>
-              </div>
-              <div className="select-surce">
-                  <img src='https://lh3.google.com/u/1/d/1HgoQHsYvDdKs-ZUwfA9SJcqVnBCIqgce=w1920-h969-iv1' alt="" />
-              </div>
-        </div>
-        </div>
+                </div>
+                <div className="select-surce">
+                    <img src='https://lh3.google.com/u/1/d/1HgoQHsYvDdKs-ZUwfA9SJcqVnBCIqgce=w1920-h969-iv1' alt="" />
+                </div>
+        </DetailsvehicleWrapper>
     )
-    }
 }
-
-export default Detailsvehicle

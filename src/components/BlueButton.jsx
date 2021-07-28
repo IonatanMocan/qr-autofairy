@@ -2,22 +2,26 @@ import React from "react";
 import styled from "styled-components";
 
 
-const BlueButtonWrapper = styled.button`
+const BlueButtonWrapper = styled.div`
+width: 100%;
+display: flex;
+justify-content:center;
+button {
   padding: 20px 74px;
   border: none;
   font-family: 'Roboto', sans-serif;
   border-radius: 25px;
-  background: #4D8CEC;
+  background-color: #4D8CEC;
   color: #fff;
-
-`
-
-function BlueButton({text}) {
+  margin: 20px 0;
+}
+`; 
+export default function BlueButton({title}) {
   return (
     <BlueButtonWrapper>
-      {text}
+      <button>
+        {title}
+      </button>
     </BlueButtonWrapper>
   )
 }
-
-export default BlueButton

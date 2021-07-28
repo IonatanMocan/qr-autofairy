@@ -1,15 +1,3 @@
-.select {
-    display: none;
-    font-family: 'Roboto', sans-serif;
-}
-.select--active {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1300px;
-    padding: 10px;
-    flex-wrap: wrap;
-}
 .select__container {
     display: flex;
     justify-content: space-between;
@@ -157,4 +145,12 @@
     color: #0069A4;
     font-family: 'Roboto', sans-serif;
     font-size: 24px;
+}
+
+.arrow {
+    transform: rotate(-180deg);
+    transition: all .3s ease-in-out;
+}
+.arrow--active {
+    transform: rotate(0);
 }

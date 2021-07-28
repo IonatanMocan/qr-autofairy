@@ -1,12 +1,7 @@
 import React, { Component } from 'react'
 
 class SellPageHeader extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            
-        }
-    }
+
     render() {
         return (
             <div className="sell-page-header">

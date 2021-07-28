@@ -1,7 +1,6 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Select from 'react-select'
-import Acardion from '../acardion/Acardion'
-import CarIcon from '../ikon/CarIcon'
+import styled from 'styled-components'
 import '../main.css'
 
 
@@ -25,36 +24,16 @@ const optionsMaker = [
     { value: 'strawberry', label: 'Strawberry' },
     { value: 'vanilla', label: 'Vanilla' }
   ]
-class SellCar extends Component{
-    constructor(props) {
-      super(props)
-      this.state = {
-        settings: false,
-        activeWrapper: false
-      }
-      this.addSettings = this.addSettings.bind(this)
-    }
-    addSettings() {
-      this.setState(({settings, activeWrapper}) => ({
-        settings: !settings,
-        activeWrapper: !activeWrapper
-    }))
-    }
-    render() {
-      const {settings, activeWrapper} = this.state
-      let classSettings = 'select'
-      let activeClassWrapper = 'edtit-wrapper'
-
-      if(settings) {
-        classSettings += ' select--active'
-      }
-      if(activeWrapper) {
-        activeClassWrapper += ' edtit-wrapper--active'
-      }
+const  SellCarWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 100%;
+`;
+export default function SellCar(){
       return (
-        <div className={activeClassWrapper}>
-        <Acardion title="Basic Info" level='15%' icon={<CarIcon/>} addSettings={this.addSettings} />
-        <div className={classSettings}>
+        <SellCarWrapper>
               <div className="select__container">
                   <div className="select__wrapper">
                       <Select className="select__item" options={optionsModel} defaultValue={optionsModel[0]}/>
@@ -72,10 +51,7 @@ class SellCar extends Component{
               <div className="select-surce">
                   <img src='https://lh3.google.com/u/1/d/1JhMN7mPibD8j-vgLyj6A87ofKiPLdK-G=w1920-h969-iv1' alt="" />
               </div>
-          </div>
-        </div>
+        </SellCarWrapper>
     )
-    }
 }
 
-export default SellCar
