@@ -1,17 +1,22 @@
 import React from 'react';
-import HeroSale from '../components/HeroSale';
+import HeroSale from '../../components/HeroSale';
 import styled from 'styled-components';
-import '../App.css';
+import '../../App.css';
 
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import Accordion from '../components/Accordion';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import Accordion from '../../components/Accordion';
 
-import CarIcon from '../images/CarIcon';
-import PersonIcon from '../images/PersonIcon';
-import CameraIcon from '../images/CameraIcon';
-import CarBlueprint from '../images/CarBlueprint';
+import CarIcon from '../../images/CarIcon';
+import PersonIcon from '../../images/PersonIcon';
+import CameraIcon from '../../images/CameraIcon';
+import CarBlueprint from '../../images/CarBlueprint';
+import BasicInfoForm from "./BasicInformation";
+import {useDraftForm} from "./useDraftForm";
+import {countPercentage} from "./utils";
+import ContactForm from "./ContactForm";
 // import CarBlueprint2 from '../images/CarBlueprint2';
+
 
 const DraftPage = styled.div`
   position: relative;
@@ -27,11 +32,22 @@ const FormWrapper = styled.div`
   padding-left: 54px;
 `;
 
-const BasicInfoWrapper = styled.div`
-  display: flex;
-`;
+
+
+
+
 
 const Draft = () => {
+  const {formik, onSelectReactSelect} = useDraftForm();
+  const basicInfoPercentage = countPercentage(formik, 'basicInfo').toFixed(0)
+  const contactInfoPercentage = countPercentage(formik, 'contact').toFixed(0)
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    formik.submitForm();
+  }
+
+
   return (
     <>
       <Header />
@@ -49,24 +65,27 @@ const Draft = () => {
             <Accordion
               icon={CarIcon}
               title='Basic Info'
-              progress='50% complete'
+              progress={`${basicInfoPercentage}% complete`}
             >
               <div className='single-form-section'>
-                {/* <hr /> */}
-                <div className='basic-info'>
-                  <div className='basic-info-form'>place for fields</div>
-                  <div className='basic-info-car-image'>
-                    <CarBlueprint />
-                  </div>
-                </div>
+                <BasicInfoForm
+                    formik={formik}
+                    onSelect={onSelectReactSelect}
+                    percentage={basicInfoPercentage}
+                    values={formik.values.basicInfo}
+                />
               </div>
             </Accordion>
             <Accordion
               icon={PersonIcon}
               title='Contact Information'
-              progress='50% complete'
+              progress={`${contactInfoPercentage}% complete`}
             >
-              <p>some text</p>
+              <ContactForm
+                  values={formik.values.contact}
+                  formik={formik}
+                  percentage={contactInfoPercentage}
+              />
             </Accordion>
             <Accordion
               icon={CarIcon}
@@ -91,6 +110,7 @@ const Draft = () => {
             >
               <p>some text</p>
             </Accordion>
+            <button type="submit" onClick={handleSubmit}>Submit me</button>
           </form>
         </FormWrapper>
       </DraftPage>

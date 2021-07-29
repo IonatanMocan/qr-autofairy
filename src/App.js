@@ -1,5 +1,5 @@
 import React from 'react';
-import Draft from './pages/Draft';
+import Draft from './pages/draft/Draft';
 import Homepage from './pages/Homepage';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
