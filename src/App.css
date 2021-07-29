@@ -1,0 +1,29 @@
+.single-form-section {
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 21px;
+  padding-right: 21px;
+  padding-bottom: 17px;
+}
+
+.basic-info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.basic-info-form {
+  width: 718px;
+  height: 379px;
+  background: #ffffff;
+  border: 2px solid #f0f0f0;
+  box-sizing: border-box;
+  border-radius: 20px;
+  padding: 18px;
+}
+
+.basic-info-car-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

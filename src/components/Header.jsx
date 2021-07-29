@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import AutofairyLogo from '../images/AutofairyLogo';
+import { Link } from 'react-router-dom';
 
 const HeaderWrapper = styled.div`
   display: flex;
@@ -41,7 +42,9 @@ const Header = () => {
       <HeaderWrapper>
         <div className='logo-container'>
           <div className='logo-image'>
-            <AutofairyLogo />
+            <Link to='/'>
+              <AutofairyLogo />
+            </Link>
           </div>
           <div className='logo-text'>SALES PAPER GENERATOR</div>
         </div>

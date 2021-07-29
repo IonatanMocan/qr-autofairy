@@ -1,12 +1,13 @@
 import React from 'react';
-import Header from '../components/Header';
-
 import styled from 'styled-components';
-import BlueButton from '../components/BlueButton';
+import { Link } from 'react-router-dom';
 
-import PeopleIllustrationPic from '../images/people-illustration.png';
-import CarsHomepage from '../components/CarsHomepage';
+import Header from '../components/Header';
 import Footer from '../components/Footer';
+import CarsHomepage from '../components/CarsHomepage';
+
+import BlueButton from '../components/BlueButton';
+import PeopleIllustrationPic from '../images/people-illustration.png';
 
 const HeroWrapper = styled.div`
   height: 496px;
@@ -47,7 +48,9 @@ const Homepage = () => {
             Let us do the work, <br />
             While you can enjoy your life.
           </h1>
-          <BlueButton text='SALE WITH US' />
+          <Link to='/draft'>
+            <BlueButton text='SALE WITH US' />
+          </Link>
         </div>
       </HeroWrapper>
       <CarsHomepageWrapper>

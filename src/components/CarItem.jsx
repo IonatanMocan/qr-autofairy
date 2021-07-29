@@ -89,11 +89,6 @@ const CarItemWrapper = styled.div`
   }
 `;
 
-// .car-image {
-//     /* background-image: url(${CarPic}); */
-//     height: 227px;
-//   }
-
 const CarImageWrapper = styled.section`
   height: 227px;
   background: url(${({ image }) => image});
