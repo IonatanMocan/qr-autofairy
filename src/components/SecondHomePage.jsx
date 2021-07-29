@@ -13,6 +13,7 @@ import BlueButton from './BlueButton'
 const Container = styled.div`
     max-width: 1300px;
     margin: 0 auto;
+    transform: translate(0,-200px);
 `
 const SecondHomePageWrapper = styled.div`
     width: 100%;
@@ -24,7 +25,7 @@ function SecondHomePage() {
             <SecondHomePageWrapper>
                 <SellPageHeader/>
                 <Container>
-                    <CombineComponents mainComponentBlock={<SellCar/>} icon={<CarIcon/>} title='Basic Info' level='15%'/>
+                    <CombineComponents mainComponentBlock={<SellCar/>}  icon={<CarIcon/>} title='Basic Info' level='15%'/>
                     <CombineComponents mainComponentBlock={<Contact/>} icon={<ContactIcon/>} title='Contact information' level='50%'/>
                     <CombineComponents mainComponentBlock={<DetailsVachine/>} icon={<CarIcon/>} title='Detailed Vehicle information ' level='75%'/>
                     <CombineComponents mainComponentBlock={<Upload/>} icon={<UploadIcon/>} title='Upload photos' level='100%' />

@@ -30,6 +30,10 @@ const  SellCarWrapper = styled.div`
   justify-content: space-between;
   flex-wrap: wrap;
   max-width: 100%;
+  background: #F9F9F9;
+  padding: 38px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
 `;
 export default function SellCar(){
       return (

@@ -48,12 +48,15 @@ const DetailsvehicleWrapper = styled.div`
 display: flex;
 justify-content: space-between;
 flex-wrap:wrap;
-width: 100%`;
-
+padding: 38px;
+width: 100%
+background: ${props => props.colored ? 'white' : 'red'};
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 15px;`;
 
 export default function Detailsvehicle() {
       return (
-            <DetailsvehicleWrapper>
+            <DetailsvehicleWrapper colored>
               <div className="select__wrapper">
                   <Select className="select__item" options={Transmission} defaultValue={Transmission[0]}/>
                   <Select className="select__item" options={Engine} defaultValue={Engine[0]}/>
