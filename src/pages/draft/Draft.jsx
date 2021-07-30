@@ -2,6 +2,7 @@ import React from 'react';
 import HeroSale from '../../components/HeroSale';
 import styled from 'styled-components';
 import '../../App.css';
+import { Link } from 'react-router-dom';
 
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
@@ -11,12 +12,13 @@ import CarIcon from '../../images/CarIcon';
 import PersonIcon from '../../images/PersonIcon';
 import CameraIcon from '../../images/CameraIcon';
 import CarBlueprint from '../../images/CarBlueprint';
-import BasicInfoForm from "./BasicInformation";
-import {useDraftForm} from "./useDraftForm";
-import {countPercentage} from "./utils";
-import ContactForm from "./ContactForm";
-// import CarBlueprint2 from '../images/CarBlueprint2';
-
+import BasicInfoForm from './BasicInformation';
+import { useDraftForm } from './useDraftForm';
+import { countPercentage } from './utils';
+import ContactForm from './ContactForm';
+import BlueButton from '../../components/BlueButton';
+import DetailedInfoForm from './DetailedInformation';
+// import CarBlueprint2 from '../../images/CarBlueprint2';
 
 const DraftPage = styled.div`
   position: relative;
@@ -32,21 +34,16 @@ const FormWrapper = styled.div`
   padding-left: 54px;
 `;
 
-
-
-
-
-
 const Draft = () => {
-  const {formik, onSelectReactSelect} = useDraftForm();
-  const basicInfoPercentage = countPercentage(formik, 'basicInfo').toFixed(0)
-  const contactInfoPercentage = countPercentage(formik, 'contact').toFixed(0)
+  const { formik, onSelectReactSelect } = useDraftForm();
+  const basicInfoPercentage = countPercentage(formik, 'basicInfo').toFixed(0);
+  const contactInfoPercentage = countPercentage(formik, 'contact').toFixed(0);
+  const detailedInfoPercentage = countPercentage(formik, 'detailed').toFixed(0);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     formik.submitForm();
-  }
-
+  };
 
   return (
     <>
@@ -69,11 +66,14 @@ const Draft = () => {
             >
               <div className='single-form-section'>
                 <BasicInfoForm
-                    formik={formik}
-                    onSelect={onSelectReactSelect}
-                    percentage={basicInfoPercentage}
-                    values={formik.values.basicInfo}
+                  formik={formik}
+                  onSelect={onSelectReactSelect}
+                  percentage={basicInfoPercentage}
+                  values={formik.values.basicInfo}
                 />
+                <div className='basic-info-car-image'>
+                  <CarBlueprint />
+                </div>
               </div>
             </Accordion>
             <Accordion
@@ -82,23 +82,25 @@ const Draft = () => {
               progress={`${contactInfoPercentage}% complete`}
             >
               <ContactForm
-                  values={formik.values.contact}
-                  formik={formik}
-                  percentage={contactInfoPercentage}
+                formik={formik}
+                percentage={contactInfoPercentage}
+                values={formik.values.contact}
               />
             </Accordion>
             <Accordion
               icon={CarIcon}
               title='Detailed Vehicle Informations'
-              progress='50% complete'
+              progress={`${detailedInfoPercentage}% complete`}
             >
               <div className='single-form-section'>
-                {/* <hr /> */}
-                <div className='basic-info'>
-                  <div className='basic-info-form'>place for fields</div>
-                  <div className='basic-info-car-image'>
-                    <CarBlueprint />
-                  </div>
+                <DetailedInfoForm
+                  formik={formik}
+                  // onSelect={onSelectReactSelect}
+                  percentage={detailedInfoPercentage}
+                  values={formik.values.detailedInfo}
+                />
+                <div className='basic-info-car-image'>
+                  <CarBlueprint />
                 </div>
               </div>
             </Accordion>
@@ -106,11 +108,15 @@ const Draft = () => {
               icon={CameraIcon}
               title='Upload Photos'
               progress='50% complete'
-              onClick={() => console.log('this is clicked')}
             >
-              <p>some text</p>
+              <p>gallery</p>
             </Accordion>
-            <button type="submit" onClick={handleSubmit}>Submit me</button>
+            {/* <button type='submit' onClick={handleSubmit}>
+              Submit me
+            </button> */}
+            <Link to='/design'>
+              <BlueButton text='NEXT' />
+            </Link>
           </form>
         </FormWrapper>
       </DraftPage>

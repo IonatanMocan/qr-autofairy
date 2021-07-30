@@ -1,4 +1,11 @@
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
 .single-form-section {
+  display: flex;
+  justify-content: space-between;
   width: 100%;
   box-sizing: border-box;
   padding-left: 21px;
@@ -7,23 +14,23 @@
 }
 
 .basic-info {
-  display: flex;
+  /* display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: center; */
 }
 
 .basic-info-form {
-  width: 718px;
+  /* width: 718px;
   height: 379px;
   background: #ffffff;
   border: 2px solid #f0f0f0;
   box-sizing: border-box;
   border-radius: 20px;
-  padding: 18px;
+  padding: 18px; */
 }
 
 .basic-info-car-image {
+  width: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
 }

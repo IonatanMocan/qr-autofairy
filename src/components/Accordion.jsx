@@ -7,6 +7,9 @@ let isClicked = false;
 
 const AccordionWrapper = styled.div`
   display: flex;
+  padding-right: 21px;
+  padding-left: 21px;
+  /* padding-bottom: 20px; */
   flex-direction: column;
   box-sizing: border-box;
   align-items: center;
