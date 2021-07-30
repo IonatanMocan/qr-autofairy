@@ -48,7 +48,7 @@ const Homepage = () => {
             Let us do the work, <br />
             While you can enjoy your life.
           </h1>
-          <Link to='/draft'>
+          <Link className="link" to='/draft'>
             <BlueButton text='SALE WITH US' />
           </Link>
         </div>

@@ -18,6 +18,8 @@ import { countPercentage } from './utils';
 import ContactForm from './ContactForm';
 import BlueButton from '../../components/BlueButton';
 import DetailedInfoForm from './DetailedInformation';
+import ProgresPage  from '../../components/ProgresPage';
+
 // import CarBlueprint2 from '../../images/CarBlueprint2';
 
 const DraftPage = styled.div`
@@ -33,7 +35,6 @@ const FormWrapper = styled.div`
   padding-right: 54px;
   padding-left: 54px;
 `;
-
 const Draft = () => {
   const { formik, onSelectReactSelect } = useDraftForm();
   const basicInfoPercentage = countPercentage(formik, 'basicInfo').toFixed(0);
@@ -54,10 +55,10 @@ const Draft = () => {
             SELL CARS <br />
             SAFE, QUICK, EFFORTLESS
           </h1>
+          <ProgresPage />
         </HeroSale>
 
         <FormWrapper>
-          <h2>Content</h2>
           <form action='/action_page.php'>
             <Accordion
               icon={CarIcon}
@@ -114,7 +115,7 @@ const Draft = () => {
             {/* <button type='submit' onClick={handleSubmit}>
               Submit me
             </button> */}
-            <Link to='/design'>
+            <Link className="link" to='/design'>
               <BlueButton text='NEXT' />
             </Link>
           </form>

@@ -5,7 +5,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import HeroSale from '../components/HeroSale';
 import ProgresPage from '../components/ProgresPage';
-
+import SignUpWithGoogle from '../components/SignUpWithGoogle';
 const PrintAndSharePage = styled.div``;
 
 const PrintAndShare = () => {
@@ -16,6 +16,7 @@ const PrintAndShare = () => {
         <HeroSale>
           <h1>We’ve created a Sales webpage for you! <br /> Please login or sign up to print.</h1>
           <ProgresPage/>
+          <SignUpWithGoogle/>
           </HeroSale>
       </PrintAndSharePage>
       <Footer />
