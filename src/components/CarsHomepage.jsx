@@ -8,11 +8,12 @@ const CarsHomepageWrapper = styled.div`
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
   padding: 36px 30px 59px 30px;
-
+  max-width: 1330px;
+  margin: 0 auto;
   .car-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 34px;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 23px;
 
     .car-item {
       width: 100%;

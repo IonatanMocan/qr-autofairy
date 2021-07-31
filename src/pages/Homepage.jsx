@@ -10,39 +10,47 @@ import BlueButton from '../components/BlueButton';
 import PeopleIllustrationPic from '../images/people-illustration.png';
 
 const HeroWrapper = styled.div`
-  height: 496px;
+  min-height: 496px;
   background-color: #dfeafc;
   position: relative;
-
-  img {
-    position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap-reverse;
+  .header-image {
+    max-width: 748.17px;
+    img {
+      width:100%;
+    }
   }
 
   .text-and-button {
-    float: right;
+    margin-bottom: 40px;
     h1 {
       color: #4d8cec;
+      line-height: 94%;
+      margin-top: 45px;
       font-weight: 700;
-      width: 735px;
-      font-size: 50px;
+      font-size: calc(24px + 36 * (100vw / 1920));
       text-align: center;
       display: block;
       line-height: 47px;
-      margin: 257px 0 45px 0;
+    }
+    a div {
+      margin: 45px 0 0 0;
     }
   }
 `;
 
-const CarsHomepageWrapper = styled.div`
-  margin: 172px 56px 80px 56px;
-`;
 
 const Homepage = () => {
   return (
     <>
       <Header happend="HI, LAURA"/>
       <HeroWrapper>
-        <img src={PeopleIllustrationPic} alt='' />
+        <div className="header-image">
+          <img src={PeopleIllustrationPic} alt='' />
+        </div>
         <div className='text-and-button'>
           <h1>
             Let us do the work, <br />
@@ -53,9 +61,7 @@ const Homepage = () => {
           </Link>
         </div>
       </HeroWrapper>
-      <CarsHomepageWrapper>
         <CarsHomepage />
-      </CarsHomepageWrapper>
       <Footer />
     </>
   );
