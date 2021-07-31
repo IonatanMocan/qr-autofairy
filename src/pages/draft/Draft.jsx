@@ -18,7 +18,7 @@ import { countPercentage } from './utils';
 import ContactForm from './ContactForm';
 import BlueButton from '../../components/BlueButton';
 import DetailedInfoForm from './DetailedInformation';
-import ProgresPage  from '../../components/ProgresPage';
+import ProgresPage, { ProgressBarFirstPage }  from '../../components/ProgresPage';
 
 // import CarBlueprint2 from '../../images/CarBlueprint2';
 
@@ -28,10 +28,8 @@ const DraftPage = styled.div`
 `;
 
 const FormWrapper = styled.div`
-  position: absolute;
-  box-sizing: border-box;
+  transform: translate(0px, -125px);
   width: 100%;
-  top: 381px;
   padding-right: 54px;
   padding-left: 54px;
 `;
@@ -45,7 +43,6 @@ const Draft = () => {
     e.preventDefault();
     formik.submitForm();
   };
-
   return (
     <>
       <Header />
@@ -55,7 +52,9 @@ const Draft = () => {
             SELL CARS <br />
             SAFE, QUICK, EFFORTLESS
           </h1>
-          <ProgresPage />
+          <ProgressBarFirstPage>
+            <ProgresPage />
+            </ProgressBarFirstPage>
         </HeroSale>
 
         <FormWrapper>

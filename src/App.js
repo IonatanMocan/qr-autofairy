@@ -2,7 +2,7 @@ import React from 'react';
 import Draft from './pages/draft/Draft';
 import Homepage from './pages/Homepage';
 import Design from './pages/Design';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import PrintAndShare from './pages/PrintAndShare';
 import Final from './pages/Final';
 

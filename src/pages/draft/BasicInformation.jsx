@@ -1,6 +1,5 @@
 import Select from 'react-select';
 import styled from 'styled-components';
-import { countPercentage } from './utils';
 
 const BasicInfoWrapper = styled.fieldset`
   padding: 18px 20px 24px 17px;

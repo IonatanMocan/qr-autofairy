@@ -1,13 +1,12 @@
-import React, { Children } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 const HeroSaleWrapper = styled.section`
-  height: 592px;
+  min-height: 592px;
   background-color: #dfeafc;
-  /* background-color: #fff; */
   box-sizing: border-box;
   color: #4d8cec;
-  padding-top: 87px;
+  padding: 87px 0;
 
   h1 {
     margin: 0;
@@ -15,12 +14,8 @@ const HeroSaleWrapper = styled.section`
     font-weight: bold;
     font-size: 50px;
     line-height: 94%;
-    /* or 47px */
-
     text-align: center;
     letter-spacing: 0.01em;
-
-    /* City Blue */
   }
 `;
 

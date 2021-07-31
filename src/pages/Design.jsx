@@ -9,7 +9,7 @@ import Qrcode from '../images/Qrcode.svg';
 import AutofairyLogo from '../images/AutofairyLogo';
 import BlueButton from '../components/BlueButton';
 import { Link } from 'react-router-dom';
-import ProgresPage from '../components/ProgresPage';
+import ProgresPage, { ProgressBarSecondPage } from '../components/ProgresPage';
 
 export function Block() {
   return (
@@ -108,7 +108,9 @@ class Design extends Component {
             ALMOST DONE, <br />
             PICK A DESIGN THAT FITS YOUR NEED
           </h1>
-          <ProgresPage lineDefault/>
+          <ProgressBarSecondPage>
+            <ProgresPage/>
+            </ProgressBarSecondPage>
         </HeroSale>
         <Slider className="qr-wrapper" asNavFor={this.state.nav1} ref={slider => (this.slider2 = slider)} slidesToShow={3} swipeToSlide={true} focusOnSelect={true}>
             <Block/>

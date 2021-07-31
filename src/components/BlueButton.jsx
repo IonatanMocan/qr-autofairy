@@ -12,13 +12,11 @@ const ButtonWrapper = styled.div`
     top: 486px;
     color: #ffffff;
     font-weight: 300;
-
     background: #4d8cec;
     border-radius: 25px;
     border: none;
     font-size: 16px;
     line-height: 94%;
-    /* identical to box height, or 15px */
     text-align: center;
     letter-spacing: 0.01em;
   }

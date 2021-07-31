@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import BlueButton from './BlueButton';
 
 const CarItemWrapper = styled.div`
   background: #fefefe;
@@ -23,7 +22,6 @@ const CarItemWrapper = styled.div`
         font-weight: bold;
         font-size: 18px;
         line-height: 94%;
-        /* or 17px */
 
         letter-spacing: 0.01em;
 
@@ -36,7 +34,6 @@ const CarItemWrapper = styled.div`
         font-weight: 500;
         font-size: 18px;
         line-height: 94%;
-        /* or 17px */
 
         letter-spacing: 0.01em;
 

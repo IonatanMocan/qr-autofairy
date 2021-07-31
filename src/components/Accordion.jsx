@@ -33,6 +33,7 @@ const AccordionWrapper = styled.div`
   .accordion-heading {
     /* margin-top: ${() => (isClicked ? '20px' : '10px')} */
     display: flex;
+    padding: 15px 0;
     justify-content: space-around;
     align-items: center;
     width: 100%;
