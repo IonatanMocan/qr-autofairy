@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 const HeaderWrapper = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   box-sizing: border-box;
   background-color: #fff;
 
@@ -28,15 +29,22 @@ const HeaderWrapper = styled.div`
   }
 
   .greeting {
+    margin-right: 64px;
+    display: flex;
     .greeting-user {
       color: #4d8cec;
-      margin: 41px 69px 27px 0;
+      margin: 0 40px 0 0; 
       font-weight: 700;
+      display: flex;
+      align-items: center;
     }
+  }
+  .greeting div:nth-child(2) {
+    margin: 15px 0;
   }
 `;
 
-const Header = () => {
+const Header = (props) => {
   return (
     <header>
       <HeaderWrapper>
@@ -49,7 +57,8 @@ const Header = () => {
           <div className='logo-text'>SALES PAPER GENERATOR</div>
         </div>
         <div className='greeting'>
-          <div className='greeting-user'>HI, LAURA</div>
+          <div className='greeting-user'>{props.happend}</div>
+          {props.saveDraft} 
         </div>
       </HeaderWrapper>
     </header>

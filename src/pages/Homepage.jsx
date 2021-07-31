@@ -40,7 +40,7 @@ const CarsHomepageWrapper = styled.div`
 const Homepage = () => {
   return (
     <>
-      <Header />
+      <Header happend="HI, LAURA"/>
       <HeroWrapper>
         <img src={PeopleIllustrationPic} alt='' />
         <div className='text-and-button'>

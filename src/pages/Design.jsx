@@ -102,7 +102,7 @@ class Design extends Component {
   render() {
   return (
     <>
-      <Header />
+      <Header happend="LOGIN / SIGNUP" />
         <HeroSale>
           <h1>
             ALMOST DONE, <br />
@@ -171,10 +171,10 @@ class Design extends Component {
                     <a href="tel:+604-353-0001">604-353-0001</a>
                   </div>
                 </div>
-            </div>
+            </div> 
           </Slider>
       <Link className="link" to='/print-and-share'>
-            <BlueButton text='SALE WITH US' />
+            <BlueButton text='NEXT' />
           </Link>
       <Footer />
     </>

@@ -45,7 +45,7 @@ const Draft = () => {
   };
   return (
     <>
-      <Header />
+      <Header happend="HI, LAURA" saveDraft={<BlueButton text="SAVE DRAFT"/>}/>
       <DraftPage>
         <HeroSale>
           <h1>

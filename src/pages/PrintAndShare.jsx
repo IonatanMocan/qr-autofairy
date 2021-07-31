@@ -12,7 +12,7 @@ const PrintAndSharePage = styled.div``;
 function PrintAndShare()  {
   return (
     <>
-      <Header />
+      <Header happend="LOGIN"/>
       <PrintAndSharePage>
         <HeroSale>
           <h1>We’ve created a Sales webpage for you! <br /> Please login or sign up to print.</h1>

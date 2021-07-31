@@ -142,12 +142,14 @@
     text-transform: uppercase;
     justify-content: center;
     align-items: center;
-    width: 241px !important;
+    width: 326px !important;
+    height: 241px;
     border-radius: 10px;
     padding: 3px 6px;
     min-height: 171px;
     flex-direction: column;
 }
+
 .block-1 {
     background-color: #E9D41C;
 }
@@ -169,8 +171,8 @@
     margin-left: 12px;
 }
 .qr-info img{
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
 }
 .qr-descr strong {
     font-size: 6px;
@@ -230,6 +232,7 @@
 }
 .qr-block__big {
     margin: 0 10px;
+    height: 426px;
     width: 700px !important;
 }
 .qr-block__big h2{
