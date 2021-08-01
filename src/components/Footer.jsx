@@ -3,15 +3,20 @@ import styled from 'styled-components';
 import AutofairyWhiteLogo from '../images/AutofairyWhiteLogo';
 
 const FooterWrapper = styled.div`
-  height: 355px;
-  box-sizing: border-box;
-  background-color: #3b8ae0;
-  display: flex;
-  justify-content: space-between;
-  padding: 47px 262px 72px 234px;
-  color: #fff;
-  font-size: 16px;
-
+background-color: #3b8ae0;
+wdith:100%;
+  .footer {
+    max-width:1330px;
+    flex-wrap:wrap;
+    min-height: 355px;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    color: #fff;
+    margin: 0 auto;
+    font-size: 16px;
+    padding: 20px;
+  }
   p {
     margin: 0;
     font-weight: normal;
@@ -47,6 +52,7 @@ const FooterWrapper = styled.div`
 function Footer() {
   return (
     <FooterWrapper>
+      <div className="footer">
       <div className='logo-and-adresses'>
         <AutofairyWhiteLogo />
         <h3>CONTACT US</h3>
@@ -61,6 +67,7 @@ function Footer() {
         <p className='legal-link'>Privacy Policy</p>
         <p className='legal-link'>Terms of Services</p>
         <p className='legal-link'>Support</p>
+      </div>
       </div>
     </FooterWrapper>
   );

@@ -12,7 +12,7 @@ const CarsHomepageWrapper = styled.div`
   margin: 0 auto;
   .car-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     grid-gap: 23px;
 
     .car-item {
