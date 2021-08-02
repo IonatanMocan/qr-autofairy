@@ -24,7 +24,7 @@ import ProgresPage, { ProgressBarFirstPage }  from '../../components/ProgresPage
 
 const DraftPage = styled.div`
   position: relative;
-  max-height: 4000px;
+  max-height: 4500px;
 `;
 
 const FormWrapper = styled.div`

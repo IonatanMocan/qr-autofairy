@@ -49,7 +49,6 @@ input:focus {
     }
   .row input {
     width: 100%;
-    margin: 20px 0 !important;
   }
   .greeting div:nth-child(2) {
     display: none !important;

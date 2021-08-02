@@ -40,7 +40,6 @@ const DetailedInfoFormWrapper = styled.fieldset`
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-
       & > * {
         min-width: 312px;
         margin-bottom: 24px;

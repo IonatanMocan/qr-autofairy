@@ -11,10 +11,12 @@ const ContactFormWrapper = styled.fieldset`
   background: #ffffff;
   border: 2px solid #f0f0f0;
   border-radius: 20px;
+  max-width: 760px;
   .row {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    width: 100%;
+    justify-content: space-between;
     input {
       min-width: 312px;
       margin: 20px 20px;
@@ -29,6 +31,11 @@ const ContactFormWrapper = styled.fieldset`
       color: #4b4343;
     }
   }
+  }
+  @media screen and (max-width: 762px)  {
+    .row input{
+      margin: 20px 0;
+    }
 `;
 
 const ContactForm = ({ values, formik, percentage }) => {
