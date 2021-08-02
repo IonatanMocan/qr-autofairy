@@ -2,9 +2,8 @@ import Select from 'react-select';
 import styled from 'styled-components';
 
 const BasicInfoWrapper = styled.fieldset`
-  padding: 18px 20px 24px 17px;
   display: flex;
-  max-width: 750px;
+  width: 750px;
   flex-direction: column;
   border: none;
   background: #ffffff;

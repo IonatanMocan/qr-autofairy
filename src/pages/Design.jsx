@@ -100,6 +100,51 @@ class Design extends Component {
     });
   }
   render() {
+    let settings = {
+      dots: true,
+      infinite: false,
+      speed: 500,
+      focusOnSelect: true,
+      slidesToShow: 4,
+      slidesToScroll: 4,
+      initialSlide: 0,
+      responsive: [
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 980,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            dots: true,
+            initialSlide: 2
+          }
+        },
+        {
+          breakpoint: 640,
+          settings: {
+            slidesToShow: 1,
+            dots: true,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    }
+    let settingsBig = {
+      dots: false,
+      infinite: false,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      initialSlide: 0,
+    }
   return (
     <>
       <Header happend="LOGIN / SIGNUP" />
@@ -112,13 +157,13 @@ class Design extends Component {
             <ProgresPage/>
             </ProgressBarSecondPage>
         </HeroSale>
-        <Slider className="qr-wrapper" asNavFor={this.state.nav1} ref={slider => (this.slider2 = slider)} slidesToShow={3} swipeToSlide={true} focusOnSelect={true}>
+        <Slider className="qr-wrapper" asNavFor={this.state.nav1} ref={slider => (this.slider2 = slider)} {...settings}>
             <Block/>
             <Block1/>
             <Block2/>
             <Block3/>
         </Slider>
-          <Slider className="big-blocks" asNavFor={this.state.nav2} ref={slider => (this.slider1 = slider)}>
+          <Slider className="big-blocks" asNavFor={this.state.nav2} ref={slider => (this.slider1 = slider)} {...settingsBig}>
             <div className="qr-active qr-active__big">
                 <h2>FOR SALE</h2>
                 <img src={Qrcode} alt="qr-code" />

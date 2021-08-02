@@ -1,21 +1,4 @@
 @charset 'UTF-8';
-/* Slider */
-/* .slick-loading .slick-list
-{
-    background: #fff url('./ajax-loader.gif') center center no-repeat;
-} */
-
-/* Icons */
-/* @font-face
-{
-    font-family: 'slick';
-    font-weight: normal;
-    font-style: normal;
-
-    src: url('./fonts/slick.eot');
-    src: url('./fonts/slick.eot?#iefix') format('embedded-opentype'), url('./fonts/slick.woff') format('woff'), url('./fonts/slick.ttf') format('truetype'), url('./fonts/slick.svg#slick') format('svg');
-} */
-/* Arrows */
 .slick-prev,
 .slick-next
 {
@@ -54,6 +37,8 @@
 .slick-prev
 {
     left: -25px;
+    z-index: 2;
+    transform: translate(45px,0px);
     width: 23px;
     height: 41px;
     background-image:  url('../../../images/prev.png');
@@ -62,6 +47,7 @@
 {
     background-image: url('../../../images/next.png');
     width: 23px;
+    transform: translate(-45px, 0px);
     height: 41px;
     right: -25px;
 }
@@ -74,9 +60,9 @@
 {
     position: absolute;
     bottom: -25px;
-
+    
     display: block;
-
+    transform: translate(0px, -60px);
     width: 100%;
     padding: 0;
     margin: 0;
@@ -90,7 +76,6 @@
     position: relative;
 
     display: inline-block;
-
     width: 20px;
     height: 20px;
     margin: 0 5px;
@@ -129,8 +114,8 @@
     content: '•';
     text-align: center;
 
-    opacity: .25;
-    color: black;
+    opacity: 1;
+    color: #E57D1D;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -142,8 +127,8 @@
     text-transform: uppercase;
     justify-content: center;
     align-items: center;
-    width: 326px !important;
-    height: 241px;
+    width: 241px !important;
+    height: 171.9px;
     border-radius: 10px;
     padding: 3px 6px;
     min-height: 171px;
@@ -190,6 +175,8 @@
 }
 .qr-block h2 {
     font-size: 45px;
+    width: max-content;
+    letter-spacing: 0.01em;
 }
 .qr-active {
     display: flex !important;
@@ -208,7 +195,7 @@
 }
 .qr-active h4 {
     font-size: 5px;
-}
+} 
 .qr-active__footer {
     display: flex;
     align-items: center;
@@ -233,7 +220,7 @@
 .qr-block__big {
     margin: 0 10px;
     height: 426px;
-    width: 700px !important;
+    width: 680px !important;
 }
 .qr-block__big h2{
     font-size: 80px;
@@ -260,7 +247,7 @@
     padding: 4px;
 }
 .big-blocks {
-    width: 730px !important;
+    max-width: 730px !important;
     max-height: 926px;
     align-items: center;
     display: flex;

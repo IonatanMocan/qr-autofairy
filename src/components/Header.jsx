@@ -33,6 +33,7 @@ const HeaderWrapper = styled.div`
     display: flex;
     .greeting-user {
       color: #4d8cec;
+      width: max-content;
       margin: 0 40px 0 0; 
       font-weight: 700;
       display: flex;

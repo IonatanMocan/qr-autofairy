@@ -4,7 +4,7 @@ import ChevronDown from '../../images/ChevronDown';
 
 const DetailedInfoFormWrapper = styled.fieldset`
   padding: 18px 20px 24px 17px;
-  max-width: 750px;
+  width: 750px;
   display: flex;
   flex-direction: column;
   border: none;

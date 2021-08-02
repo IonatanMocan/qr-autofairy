@@ -1,11 +1,10 @@
-/* Slider */
-.slick-slider
-{
+.slick-slider {
     position: relative;
     margin: 0 auto;
+    justify-content: space-between;
     box-sizing: border-box;
-    width: 1331.95px;
-
+    max-width: 1331.95px;
+    padding: 20px;
     -webkit-user-select: none;
        -moz-user-select: none;
         -ms-user-select: none;
@@ -18,18 +17,16 @@
     -webkit-tap-highlight-color: transparent;
 }
 
-.slick-list
-{
+.slick-list {
     position: relative;
-
+    width: 100%;
     display: block;
     overflow: hidden;
 
     margin: 0;
     padding: 0;
 }
-.slick-list:focus
-{
+.slick-list:focus {
     outline: none;
 }
 .slick-list.dragging

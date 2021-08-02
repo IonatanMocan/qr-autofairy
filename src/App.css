@@ -13,9 +13,6 @@ input:focus {
   width: 100%;
   align-items: center;
   flex-wrap: wrap;
-  box-sizing: border-box;
-  padding-left: 21px;
-  padding-right: 21px;
   padding-bottom: 17px;
 }
 .basic-info-car-image {
@@ -36,4 +33,25 @@ input:focus {
   height: 27px !important;
   color: black;
   width: 27px;
+}
+/* media  */
+@media screen and (max-width: 762px)  {
+  .big-blocks {
+      display: none !important;
+    }
+  .row > * {
+      width: 100%;
+    }
+  .greeting div:nth-child(2) {
+    display: none !important;
+    }
+}
+@media screen and (max-width: 480px)  {
+  .line {
+    height: 1px !important;
+  }
+  .progres__item span {
+    width: 20px !important;
+    height: 20px !important;
+  }
 }

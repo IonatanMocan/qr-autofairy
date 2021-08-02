@@ -9,11 +9,11 @@ import { Block1 } from './Design';
 import BlueButton from '../components/BlueButton';
 import QrCodeForVisit from '../images/qr-code-for-visit.jpg'
 const FinalPage = styled.div`
-width: 1330px;
+max-width: 1330px;
 margin: 0 auto;
 background-color: white;
 justify-content: center;
-height: 511px;
+min-height: 511px;
 display: flex;
 background: #F9F9F9;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -22,12 +22,14 @@ border-radius: 15px;
   margin-top: 54px;
   width: 770px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
     }
   .print {
-      width: 326px;
+      max-width: 326px;
       height: 316px;
+      margin: 0 auto;
       button {
         width:100%;
       }
@@ -37,6 +39,8 @@ border-radius: 15px;
     font-size: 32px;
     color: #000;
     letter-spacing: 0.01em;
+    text-align: center;
+    margin: 10px 0;
     line-height: 120%;
   }
   a {
@@ -48,6 +52,7 @@ border-radius: 15px;
   }
   .visit {
     height: 316px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

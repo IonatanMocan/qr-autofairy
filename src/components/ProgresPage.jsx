@@ -19,7 +19,11 @@ margin: 0 auto;
     .progres__item span {
         border: 2px solid #717171; 
         border-radius: 100%;
-        padding: 10px 15px;
+        display: flex;
+        width: 35px;
+        height: 35px;
+        justify-content: center;
+        align-items: center;
         color: #717171;
     }
     .progres__item h2 {
