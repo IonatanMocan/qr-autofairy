@@ -29,10 +29,15 @@ input:focus {
 .css-1okebmr-indicatorSeparator{
   display: none;
 }
-.css-tj5bde-Svg {
+.row div:nth-child(1) div:nth-child(2) div svg{
   height: 27px !important;
   color: black;
-  width: 27px;
+  width: 27px !important;
+}
+.row div:nth-child(2) div:nth-child(2) div svg{
+  height: 27px !important;
+  color: black;
+  width: 27px !important;
 }
 /* media  */
 @media screen and (max-width: 762px)  {
@@ -42,9 +47,16 @@ input:focus {
   .row > * {
       width: 100%;
     }
+  .row input {
+    width: 100%;
+    margin: 20px 0 !important;
+  }
   .greeting div:nth-child(2) {
     display: none !important;
     }
+  .logo-text {
+      display: none;
+  }
 }
 @media screen and (max-width: 480px)  {
   .line {

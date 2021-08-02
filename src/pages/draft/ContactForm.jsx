@@ -16,7 +16,7 @@ const ContactFormWrapper = styled.fieldset`
     flex-wrap: wrap;
     justify-content: space-evenly;
     input {
-      width: 312px;
+      min-width: 312px;
       margin: 20px 20px;
       height: 45px;
       background: #ffffff;

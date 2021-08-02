@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import ChevronDown from '../../images/ChevronDown';
 
 const DetailedInfoFormWrapper = styled.fieldset`
-  padding: 18px 20px 24px 17px;
   width: 750px;
   display: flex;
   flex-direction: column;

@@ -4,23 +4,24 @@ import AutofairyLogo from '../images/AutofairyLogo';
 import { Link } from 'react-router-dom';
 
 const HeaderWrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-sizing: border-box;
   background-color: #fff;
-
+  max-width: 1330px;
+  display: flex;
+  padding: 15px 10px;
+  margin: 0 auto;
+  justify-content: space-between;
   .logo-container {
     display: flex;
     align-items: center;
-    align-items: center;
-
     .logo-image {
-      margin: 17px 11px 27px 23px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
 
     .logo-text {
       width: 94px;
+      margin-left: 10px;
       font-size: 14px;
       font-family: 'Roboto', sans-serif;
       font-weight: 700;
@@ -29,7 +30,6 @@ const HeaderWrapper = styled.div`
   }
 
   .greeting {
-    margin-right: 64px;
     display: flex;
     .greeting-user {
       color: #4d8cec;
