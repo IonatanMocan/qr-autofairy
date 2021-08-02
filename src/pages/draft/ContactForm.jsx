@@ -3,40 +3,32 @@ import styled from 'styled-components';
 
 const ContactFormWrapper = styled.fieldset`
   width: 100%;
-  /* min-height: 286px; */
-  /* padding: 44px 21px 69px 21px; */
   padding-top: 52px;
   padding-bottom: 52px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: center; */
   background: #ffffff;
   border: 2px solid #f0f0f0;
   box-sizing: border-box;
   border-radius: 20px;
 
   .row {
-    &:nth-child(1) {
-      margin-bottom: 35px;
-    }
+    margin: 0 auto;
 
     input {
       width: 312px;
+      margin: 10px 0;
       height: 45px;
       background: #ffffff;
       border: 1px solid #4d8cec;
       box-sizing: border-box;
       border-radius: 10px;
-      padding: 14px;
-
+      padding: 27.5px 12px;
       font-size: 16px;
       line-height: 94%;
-      /* or 15px */
-
       letter-spacing: 0.01em;
-
       color: #4b4343;
     }
 

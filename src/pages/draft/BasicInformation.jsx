@@ -3,62 +3,64 @@ import styled from 'styled-components';
 
 const BasicInfoWrapper = styled.fieldset`
   padding: 18px 20px 24px 17px;
-  min-width: 718px;
   display: flex;
+  max-width: 750px;
   flex-direction: column;
-  /* align-items: center; */
-
   border: none;
-  box-sizing: border-box;
   background: #ffffff;
-
   color: #4b4343;
-
+  .css-1wa3eu0-placeholder {
+    color:#4B4343;
+    opacity: 1;
+  }
+  .css-2b097c-container {
+    border: none;
+  }
+  .css-yk16xz-control {
+    border: 1px solid #4D8CEC;
+    border-radius: 10px
+  }
+  input {
+    width: 100%;
+    border: 1px solid #4D8CEC;
+    height: 45px;
+    border-radius: 10px;
+    padding: 27.5px 12px;
+  }
   .basic-info-left-side {
-    input,
+    width: 100%;
+    flex-wrap: wrap;
     textarea {
       background: #ffffff;
       border: 1px solid #4d8cec;
-      box-sizing: border-box;
-      border-radius: 10px;
+      width: 100%;
       resize: none;
+      padding: 12px;
     }
-
     textarea {
       width: 100%;
       min-height: 100px;
     }
 
     .row {
-      width: 100%;
       display: flex;
-      flex-direction: row;
       justify-content: space-between;
-
+      flex-wrap: wrap;
       & > * {
         min-width: 312px;
         margin-bottom: 24px;
-
         font-family: 'Roboto';
         font-style: normal;
         font-weight: normal;
         font-size: 16px;
         line-height: 94%;
-
-        border: 2px solid #f0f0f0;
         border-radius: 20px;
-
         letter-spacing: 0.01em;
-      }
-
-      input {
-        width: 312px;
-        height: 45px;
-        padding: 13px;
       }
     }
   }
 `;
+
 
 const makerOptions = [
   {

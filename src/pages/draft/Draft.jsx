@@ -24,14 +24,13 @@ import ProgresPage, { ProgressBarFirstPage }  from '../../components/ProgresPage
 
 const DraftPage = styled.div`
   position: relative;
-  height: 2500px;
+  max-height: 4000px;
 `;
 
 const FormWrapper = styled.div`
   transform: translate(0px, -125px);
-  width: 100%;
-  padding-right: 54px;
-  padding-left: 54px;
+  max-width: 1330px;
+  margin: 0 auto;
 `;
 const Draft = () => {
   const { formik, onSelectReactSelect } = useDraftForm();

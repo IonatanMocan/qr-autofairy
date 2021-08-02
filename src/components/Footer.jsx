@@ -32,13 +32,16 @@ wdith:100%;
       margin-bottom: 30px;
       font-size: 16px;
       line-height: 19px;
-      /* identical to box height */
-
       color: #ffffff;
     }
 
     .email {
       margin-bottom: 31px;
+      text-decoration: none;
+      color:#fff;
+    }
+    .address {
+      margin-top: 20px;
     }
   }
 
@@ -56,7 +59,7 @@ function Footer() {
       <div className='logo-and-adresses'>
         <AutofairyWhiteLogo />
         <h3>CONTACT US</h3>
-        <p className='email'>autofairy.tech@gmail.com</p>
+        <a className='email' href="mailto:autofairy.tech@gmail.com" >autofairy.tech@gmail.com</a>
         <p className='address'>
           4380 Agar Dr., <br />
           Richmond, <br />

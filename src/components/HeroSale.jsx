@@ -12,7 +12,7 @@ const HeroSaleWrapper = styled.section`
     margin: 0;
     display: block;
     font-weight: bold;
-    font-size: 50px;
+    font-size: calc(24px + 36 * (100vw / 1920));
     line-height: 94%;
     text-align: center;
     letter-spacing: 0.01em;
