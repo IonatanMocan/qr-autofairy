@@ -1,7 +1,7 @@
 .slick-slider {
     position: relative;
     margin: 0 auto;
-    justify-content: space-between;
+    justify-content: space-evenly;
     box-sizing: border-box;
     max-width: 1331.95px;
     padding: 20px;
