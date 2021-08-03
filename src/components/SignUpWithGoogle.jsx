@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import SignUpWithGoogleImage from '../images/SignUpWithGoogle.png'
+import SignInWithGoogleIcon from '../images/SignInWithGoogleIcon'
 
-// 1. create client_id look in index.hmtl
+// 1. create client_id look in index.hmtl localhost:3000, qr-autofairy.netlify.app
 // 2.for get more info https://developers.google.com/identity/sign-in/web/reference#googleusergetbasicprofile
 const WrapperButton = styled.div`
 width: 100%;
@@ -11,7 +11,22 @@ justify-content: center;
     button {
         margin:0 auto;
         border: none;
-        background-color: transparent;
+        display: flex;
+        justify-content:space-evenly;
+        align-items: center;
+        width: 321px;
+        height: 58px;
+        background-color: #E54834;
+        svg {
+            width: 40px;
+            height: 40px;
+        }
+        span {
+          width: max-content;
+          color: white;
+          font-family: 'Roboto';
+          font-size: 18px;
+        }
     }` 
 class SignUpWithGoogle extends Component {
     state = {
@@ -46,7 +61,10 @@ class SignUpWithGoogle extends Component {
         console.log(name)
         return(
             <WrapperButton>
-            <button onClick={this.signIn}><img src={SignUpWithGoogleImage} alt="button" /></button>
+            <button onClick={this.signIn}>
+              <SignInWithGoogleIcon/>
+              <span>Sign Up With Google</span>
+            </button>
             </WrapperButton>
         ) 
       }
