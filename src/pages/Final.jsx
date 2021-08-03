@@ -20,7 +20,7 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 15px;
 .wrapper {
   margin-top: 54px;
-  width: 770px;
+  width: 870px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -32,6 +32,20 @@ border-radius: 15px;
       margin: 0 auto;
       button {
         width:100%;
+      }
+      .qr-block {
+        width: 325.07px !important;
+        height: 231.57px;
+        h2 {
+          font-size: 60px;
+        }
+        .qr-info {
+          margin: 15px 0;
+          width: 100%;
+          img{
+            margin: 0 15px 0 14px;
+          }
+        }
       }
   }
   h2 {
