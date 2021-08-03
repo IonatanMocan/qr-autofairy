@@ -18,8 +18,8 @@ justify-content: center;
         height: 58px;
         background-color: #E54834;
         svg {
-            width: 40px;
-            height: 40px;
+            width: 30px;
+            height: 30px;
         }
         span {
           width: max-content;
@@ -29,36 +29,36 @@ justify-content: center;
         }
     }` 
 class SignUpWithGoogle extends Component {
-    state = {
-        name: null
-      }
-      componentDidMount() {
-        const _onInit = auth2 => {
-          console.log('init OK', auth2)
-        }
-        const _onError = err => {
-          console.log('error', err)
-        }
-        window.gapi.load('auth2', function() {
-          window.gapi.auth2
-            .init({
-              client_id: process.env.REACT_APP_GOOGLE_CLIENT_ID,
-            })
-            .then(_onInit, _onError)
-        })
-      }
-      signIn = () => {
-        const auth2 = window.gapi.auth2.getAuthInstance()
-        auth2.signIn().then(googleUser => {
-          const profile = googleUser.getBasicProfile()
-          this.setState({
-            name: profile.getGivenName()
-          })
-        })
-      }
+    // state = {
+    //     name: null
+    //   }
+    //   componentDidMount() {
+    //     const _onInit = auth2 => {
+    //       console.log('init OK', auth2)
+    //     }
+    //     const _onError = err => {
+    //       console.log('error', err)
+    //     }
+    //     window.gapi.load('auth2', function() {
+    //       window.gapi.auth2
+    //         .init({
+    //           client_id: process.env.REACT_APP_GOOGLE_CLIENT_ID,
+    //         })
+    //         .then(_onInit, _onError)
+    //     })
+    //   }
+    //   signIn = () => {
+    //     const auth2 = window.gapi.auth2.getAuthInstance()
+    //     auth2.signIn().then(googleUser => {
+    //       const profile = googleUser.getBasicProfile()
+    //       this.setState({
+    //         name: profile.getGivenName()
+    //       })
+    //     })
+    //   }
       render() {
-        const { name } = this.state
-        console.log(name)
+        // const { name } = this.state
+        // console.log(name)
         return(
             <WrapperButton>
             <button onClick={this.signIn}>
