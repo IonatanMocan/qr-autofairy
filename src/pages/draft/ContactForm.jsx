@@ -5,6 +5,7 @@ const ContactFormWrapper = styled.fieldset`
   padding-top: 52px;
   padding-bottom: 52px;
   display: flex;
+  padding: 0 15px;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;

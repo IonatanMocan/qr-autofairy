@@ -6,6 +6,7 @@ max-width: 600px;
 margin: 0 auto; 
     .wrapper {
         display:flex;
+        padding: 0 15px;
         justify-content: space-between;
         width: 100%;
         margin: 80px auto;
@@ -37,7 +38,21 @@ margin: 0 auto;
         background-color: #C4C4C4;
         height: 3px;
         margin-top: 20px;
-    }`;
+    }
+    @media screen and (max-width: 480px)  {
+        .line {
+          height: 1px;
+          margin: 12px 10px;
+        }
+        .progres__item span {
+          width: 25px;
+          font-size: 10px;
+          height: 25px;
+        }
+        .progres__item h2 {
+          font-size: 10px;
+        }
+      }`;
 export const ProgressBarFirstPage = styled(WrapperProgressBar)`
     .one span {
         color: white;

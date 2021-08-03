@@ -46,24 +46,24 @@ const HeaderWrapper = styled.div`
 `;
 
 const Header = (props) => {
-  return (
-    <header>
-      <HeaderWrapper>
-        <div className='logo-container'>
-          <div className='logo-image'>
-            <Link to='/'>
-              <AutofairyLogo />
-            </Link>
+    return (
+      <header>
+        <HeaderWrapper>
+          <div className='logo-container'>
+            <div className='logo-image'>
+              <Link to='/'>
+                <AutofairyLogo />
+              </Link>
+            </div>
+            <div className='logo-text'>SALES PAPER GENERATOR</div>
           </div>
-          <div className='logo-text'>SALES PAPER GENERATOR</div>
-        </div>
-        <div className='greeting'>
-          <div className='greeting-user'>{props.happend}</div>
-          {props.saveDraft} 
-        </div>
-      </HeaderWrapper>
-    </header>
-  );
+          <div className='greeting'>
+            <div className='greeting-user'>{props.happend}</div>
+            {props.saveDraft} 
+          </div>
+        </HeaderWrapper>
+      </header>
+    );
 };
 
-export default Header;
+export default Header

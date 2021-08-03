@@ -6,10 +6,9 @@ import HeroSale from '../components/HeroSale';
 import ProgresPage, { ProgressBarThirdPage } from '../components/ProgresPage';
 import SignUpWithGoogle from '../components/SignUpWithGoogle';
 
-
 const PrintAndSharePage = styled.div``;
 
-function PrintAndShare()  {
+const PrintAndShare = () =>  {
   return (
     <>
       <Header happend="LOGIN"/>
@@ -19,13 +18,12 @@ function PrintAndShare()  {
           <ProgressBarThirdPage>
             <ProgresPage/>
             </ProgressBarThirdPage>
-          <SignUpWithGoogle/>
+            <SignUpWithGoogle/>
           </HeroSale>
       </PrintAndSharePage>
       <Footer />
     </>
   );
 };
-
-export default PrintAndShare;
+export default PrintAndShare
 
