@@ -14,7 +14,6 @@ const PrintAndShare = () =>  {
     <>
       <Header happend="LOGIN"/>
       <PrintAndSharePage>
-      <FinalPart/>
         <HeroSale>
           <h1>We’ve created a Sales webpage for you! <br /> Please login or sign up to print.</h1>
           <ProgressBarThirdPage>
@@ -23,6 +22,7 @@ const PrintAndShare = () =>  {
             <SignUpWithGoogle/>
           </HeroSale>
       </PrintAndSharePage>
+      <FinalPart/>
       <Footer />
     </>
   );
