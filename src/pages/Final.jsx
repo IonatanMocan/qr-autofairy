@@ -8,6 +8,7 @@ import ProgresPage, { ProgressBarThirdPage } from '../components/ProgresPage';
 import { Block1 } from './Design';
 import BlueButton from '../components/BlueButton';
 import QrCodeForVisit from '../images/qr-code-for-visit.jpg'
+
 const FinalPage = styled.div`
 max-width: 1330px;
 margin: 0 auto;
@@ -75,7 +76,23 @@ border-radius: 15px;
     margin: 32px 0px 0px 0px;
   }
 `;
-
+export const FinalPart = () => {
+  return(
+    <FinalPage>
+    <div className="wrapper">
+      <div className="print">
+          <Block1/>
+          <BlueButton text='PRINT'/>
+        </div>
+        <div className="visit">
+          <h2>We’ve created a Sales <br /> webpage for you! </h2>
+          <a href="https://autofairy.com/c/fwer283r1">Visit the link: https://autofairy.com/c/fwer283r1</a> <br />
+          <img src={QrCodeForVisit} alt="qr code for visit website"/>
+        </div>
+    </div>
+  </FinalPage>
+  );
+}
 const Final = () => {
   return (
     <>
@@ -88,19 +105,7 @@ const Final = () => {
           <ProgressBarThirdPage>
             <ProgresPage/>
           </ProgressBarThirdPage>
-          <FinalPage>
-            <div className="wrapper">
-              <div className="print">
-                  <Block1/>
-                  <BlueButton text='PRINT'/>
-                </div>
-                <div className="visit">
-                  <h2>We’ve created a Sales <br /> webpage for you! </h2>
-                  <a href="https://autofairy.com/c/fwer283r1">Visit the link: https://autofairy.com/c/fwer283r1</a> <br />
-                  <img src={QrCodeForVisit} alt="qr code for visit website"/>
-                </div>
-            </div>
-          </FinalPage>
+          <FinalPart/>
         </HeroSale>
       <Footer />
     </>

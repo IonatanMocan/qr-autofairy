@@ -9,7 +9,7 @@ const CarsHomepageWrapper = styled.div`
   border-radius: 10px;
   padding: 36px 30px 59px 30px;
   max-width: 1330px;
-  margin: 0 auto;
+  margin: 0 auto 20px auto;
   .car-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
