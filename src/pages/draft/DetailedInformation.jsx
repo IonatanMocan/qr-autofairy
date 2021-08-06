@@ -1,6 +1,5 @@
 import Select from 'react-select';
 import styled from 'styled-components';
-import ChevronDown from '../../images/ChevronDown';
 
 const DetailedInfoFormWrapper = styled.fieldset`
   width: 750px;
@@ -71,11 +70,6 @@ const makerOptions = [
     value: 'option2',
   },
 ];
-
-const yearOptions = [2011, 2012, 2013].map((value) => ({
-  label: value,
-  value,
-}));
 
 const DetailedInfoForm = ({ values, onSelect, formik, percentage }) => {
   return (

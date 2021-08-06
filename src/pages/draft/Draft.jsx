@@ -66,7 +66,7 @@ const Draft = () => {
               <div className='single-form-section'>
                 <BasicInfoForm
                   formik={formik}
-                  onSelect={onSelectReactSelect}
+                  // onSelect={onSelectReactSelect}
                   percentage={basicInfoPercentage}
                   values={formik.values.basicInfo}
                 />
