@@ -82,14 +82,14 @@ const DetailedInfoForm = ({ values, onSelect, formik, percentage }) => {
             placeholder='Transmission'
             options={makerOptions}
             onChange={onSelect}
-            selectedOption={values.maker}
+            selectedOption={values.transmission}
             name='detailed.transmission'
           />
           <Select
             placeholder='Fuel Type'
             options={makerOptions}
             onChange={onSelect}
-            selectedOption={values.model}
+            selectedOption={values.fueltype}
             name='detailed.fueltype'
           />
         </div>
@@ -98,14 +98,14 @@ const DetailedInfoForm = ({ values, onSelect, formik, percentage }) => {
             placeholder='Engine'
             options={makerOptions}
             onChange={onSelect}
-            selectedOption={values.year}
+            selectedOption={values.engine}
             name='detailed.engine'
           />
           <Select
             placeholder='Drivetrain'
             options={makerOptions}
             onChange={onSelect}
-            selectedOption={values.trim}
+            selectedOption={values.drivetrain}
             name='detailed.drivetrain'
           />
         </div>
@@ -114,14 +114,14 @@ const DetailedInfoForm = ({ values, onSelect, formik, percentage }) => {
             placeholder='Exterior Color'
             options={makerOptions}
             onChange={onSelect}
-            selectedOption={values.year}
+            selectedOption={values.exteriorColor}
             name='detailed.exteriorColor'
           />
           <Select
             placeholder='Interior Color'
             options={makerOptions}
             onChange={onSelect}
-            selectedOption={values.trim}
+            selectedOption={values.interiorColor}
             name='detailed.interiorColor'
           />
         </div>
@@ -130,14 +130,14 @@ const DetailedInfoForm = ({ values, onSelect, formik, percentage }) => {
             placeholder='Passengers'
             options={makerOptions}
             onChange={onSelect}
-            selectedOption={values.year}
+            selectedOption={values.passengers}
             name='detailed.passengers'
           />
           <Select
             placeholder='Doors'
             options={makerOptions}
             onChange={onSelect}
-            selectedOption={values.trim}
+            selectedOption={values.doors}
             name='detailed.doors'
           />
         </div>

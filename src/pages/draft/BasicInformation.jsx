@@ -131,8 +131,8 @@ const BasicInfoForm = ({ values, onSelect, formik, percentage }) => {
             <input
               type='text'
               placeholder='KM'
-              // onChange={formik.handleChange}
-              // value={values.km}
+              onChange={formik.handleChange}
+              value={values.km}
               name='basicInfo.km'
             />
           </label>
@@ -141,16 +141,16 @@ const BasicInfoForm = ({ values, onSelect, formik, percentage }) => {
               type='text'
               name='basicInfo.price'
               placeholder='Price'
-              // onChange={formik.handleChange}
-              // value={values.price}
+              onChange={formik.handleChange}
+              value={values.price}
             />
           </label>
         </div>
         <div className='row'>
           <textarea
             name='basicInfo.description'
-            // onChange={formik.handleChange}
-            // value={values.description}
+            onChange={formik.handleChange}
+            value={values.description}
             placeholder='Description'
           />
         </div>

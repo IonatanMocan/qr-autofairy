@@ -48,16 +48,16 @@ const ContactForm = ({ values, formik, percentage }) => {
           type='text'
           placeholder='Name'
           name='contact.name'
-          // value={values.name}
-          // onChange={formik.handleChange}
+          value={values.name}
+          onChange={formik.handleChange}
           className='left-input'
         />
         <input
           type='text'
           placeholder='Preferred Time for Call'
           name='contact.time'
-          // value={values.time}
-          // onChange={formik.handleChange}
+          value={values.time}
+          onChange={formik.handleChange}
         />
       </div>
       <div className='row'>
@@ -65,16 +65,16 @@ const ContactForm = ({ values, formik, percentage }) => {
           type='text'
           placeholder='Phone Number'
           name='contact.phone'
-          // value={values.phone}
-          // onChange={formik.handleChange}
+          value={values.phone}
+          onChange={formik.handleChange}
           className='left-input'
         />
         <input
           type='text'
           placeholder='Email'
           name='contact.email'
-          // value={values.email}
-          // onChange={formik.handleChange}
+          value={values.email}
+          onChange={formik.handleChange}
         />
       </div>
     </ContactFormWrapper>

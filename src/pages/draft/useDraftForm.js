@@ -17,7 +17,7 @@ export const useDraftForm = () => {
         name: '',
         email: '', // imocan@gmail.com
       },
-      detailedInfo: {
+      detailed: {
         transmission: '',
         fueltype: '',
         engine: '',

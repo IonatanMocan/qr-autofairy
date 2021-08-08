@@ -66,7 +66,7 @@ const Draft = () => {
               <div className='single-form-section'>
                 <BasicInfoForm
                   formik={formik}
-                  // onSelect={onSelectReactSelect}
+                  onSelect={onSelectReactSelect}
                   percentage={basicInfoPercentage}
                   values={formik.values.basicInfo}
                 />
@@ -94,9 +94,9 @@ const Draft = () => {
               <div className='single-form-section'>
                 <DetailedInfoForm
                   formik={formik}
-                  // onSelect={onSelectReactSelect}
+                  onSelect={onSelectReactSelect}
                   percentage={detailedInfoPercentage}
-                  values={formik.values.detailedInfo}
+                  values={formik.values.detailed}
                 />
                 <div className='basic-info-car-image'>
                   <CarBlueprint />
